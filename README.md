@@ -26,17 +26,20 @@ cd sort-my-files
 
 ```bash
 chmod +x organize_files.sh
-🛠 Usage
+```
+## 🛠 Usage
 Basic command:
 
 ```bash
 ./organize_files.sh /path/to/your/directory
+```
 Example:
 
 ```bash
 # Create test files
 mkdir test && cd test
 touch file.txt image.jpg document.pdf no_extension README.md
+```
 
 # Run the script
 ../organize_files.sh .
@@ -65,26 +68,10 @@ extension="${file##*.}"            # Extract extension
     extension="no_extension"
 mkdir -p "$extension"              # Create folder
 mv "$file" "$extension/"           # Move file
-📜 License
+```
+
+## 📜 License
 MIT License - See LICENSE file for details
 
-Made with ❤️ by Your Name
+Made with ❤️ by Houda Belhad
 
-
-Pour l'utiliser :
-
-1. Créez le fichier :
-```bash
-nano README.md
-Copiez-collez tout le contenu Markdown ci-dessus
-
-Sauvegardez et quittez :
-
-Dans nano : Ctrl+O puis Entrée pour sauvegarder, puis Ctrl+X pour quitter
-
-Ajoutez au dépôt Git :
-
-```bash
-git add README.md
-git commit -m "Add comprehensive README"
-git push
