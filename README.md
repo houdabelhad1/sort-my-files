@@ -22,3 +22,5 @@
 ```bash
 git clone git@github.com:houdabelhad1/sort-my-files.git
 cd sort-my-files
+
+2. Make the script executable:
