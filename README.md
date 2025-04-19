@@ -1,4 +1,6 @@
-# sort-my-files
+Voici l'intégralité du texte en format Markdown prêt à être copié dans votre fichier README.md :
+
+```markdown
 # 📂 Sort My Files - File Organizer Script
 
 **A simple Bash script to automatically organize files by their extensions**
@@ -22,5 +24,86 @@
 ```bash
 git clone git@github.com:houdabelhad1/sort-my-files.git
 cd sort-my-files
+```
 
 2. Make the script executable:
+```bash
+chmod +x organize_files.sh
+```
+
+## 🛠 Usage
+
+Basic command:
+```bash
+./organize_files.sh /path/to/your/directory
+```
+
+Example:
+```bash
+# Create test files
+mkdir test && cd test
+touch file.txt image.jpg document.pdf no_extension README.md
+
+# Run the script
+../organize_files.sh .
+```
+
+Result structure:
+```
+test/
+├── txt/
+│   └── file.txt
+├── jpg/
+│   └── image.jpg  
+├── pdf/
+│   └── document.pdf
+└── no_extension/
+    ├── README.md
+    └── no_extension
+```
+
+## 🧠 How It Works
+
+The script:
+1. Checks for valid directory input
+2. Processes each file:
+```bash
+extension="${file##*.}"            # Extract extension
+[ "$extension" = "$file" ] &&      # Handle no extension
+    extension="no_extension"
+mkdir -p "$extension"              # Create folder
+mv "$file" "$extension/"           # Move file
+```
+
+## 📜 License
+
+MIT License - See [LICENSE](LICENSE) file for details
+
+---
+
+Made with ❤️ by [Your Name](https://github.com/houdabelhad1)
+```
+
+Pour l'utiliser :
+
+1. Créez le fichier :
+```bash
+nano README.md
+```
+
+2. Copiez-collez tout le contenu Markdown ci-dessus
+
+3. Sauvegardez et quittez :
+- Dans nano : `Ctrl+O` puis Entrée pour sauvegarder, puis `Ctrl+X` pour quitter
+
+4. Ajoutez au dépôt Git :
+```bash
+git add README.md
+git commit -m "Add comprehensive README"
+git push
+```
+
+Conseils pour personnalisation :
+- Remplacez `[Your Name]` par votre nom ou pseudo
+- Ajoutez des exemples spécifiques dans la section Features
+- Pour la licence, créez un fichier LICENSE séparé avec le texte complet de la licence MIT
