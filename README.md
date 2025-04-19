@@ -42,7 +42,9 @@ touch file.txt image.jpg document.pdf no_extension README.md
 ```
 
 # Run the script
-../organize_files.sh .
+```bash
+../organize_files.sh
+```
 Result structure:
 
 test/
@@ -55,7 +57,8 @@ test/
 └── no_extension/
     ├── README.md
     └── no_extension
-🧠 How It Works
+
+## 🧠 How It Works
 The script:
 
 Checks for valid directory input
