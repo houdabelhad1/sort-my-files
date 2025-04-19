@@ -21,7 +21,8 @@
 ```bash
 git clone git@github.com:houdabelhad1/sort-my-files.git
 cd sort-my-files
-Make the script executable:
+```
+2. Make the script executable:
 
 ```bash
 chmod +x organize_files.sh
