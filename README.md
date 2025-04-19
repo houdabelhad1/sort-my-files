@@ -23,16 +23,16 @@ git clone git@github.com:houdabelhad1/sort-my-files.git
 cd sort-my-files
 Make the script executable:
 
-bash
+```bash
 chmod +x organize_files.sh
 🛠 Usage
 Basic command:
 
-bash
+```bash
 ./organize_files.sh /path/to/your/directory
 Example:
 
-bash
+```bash
 # Create test files
 mkdir test && cd test
 touch file.txt image.jpg document.pdf no_extension README.md
@@ -58,7 +58,7 @@ Checks for valid directory input
 
 Processes each file:
 
-bash
+```bash
 extension="${file##*.}"            # Extract extension
 [ "$extension" = "$file" ] &&      # Handle no extension
     extension="no_extension"
@@ -83,16 +83,7 @@ Dans nano : Ctrl+O puis Entrée pour sauvegarder, puis Ctrl+X pour quitter
 
 Ajoutez au dépôt Git :
 
-bash
+```bash
 git add README.md
 git commit -m "Add comprehensive README"
 git push
-Conseils pour personnalisation :
-
-Remplacez [Your Name] par votre nom ou pseudo
-
-Ajoutez des exemples spécifiques dans la section Features
-
-Pour la licence, créez un fichier LICENSE séparé avec le texte complet de la licence MIT
-
-New chat
